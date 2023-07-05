@@ -1,4 +1,5 @@
 import className from 'classnames';
+import PropTypes from 'prop-types';
 
 
 
@@ -32,4 +33,26 @@ function Button({
 
     return <button {...rest} className={classCSS} >{children}</button>
 }
+
+Button.propTypes = {
+    validatePropType: ({
+        children,
+        primary,
+        secondary,
+        success,
+        warning,
+        danger,
+        rounded,
+        outline})=> {
+            const propsCount = Number(!!primary)
+                + Number(!!secondary)
+                + Number(!!success)
+                + Number(!!warning)
+                + Number(!!danger);
+            if (propsCount > 1) {
+                return new Error('Only 1 of primary, secondary, success, warning, danger can be true');
+            }
+        }
+}
+
 export default Button;

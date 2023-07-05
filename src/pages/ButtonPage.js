@@ -7,7 +7,7 @@ function ButtonPage() {
     return (
         <div>
             <div>
-                <Button className="mb-5" success onClick={handleClick}>
+                <Button className="mb-5" success primary onClick={handleClick}>
                     <GoBell/>
                     Click me!
                 </Button>
@@ -33,7 +33,9 @@ function ButtonPage() {
                 </Button>
             </div>
             <div>
-                <Button primary rounded>Primary Action</Button>
+                <Button primary rounded>
+                    Primary Action
+                </Button>
             </div>
         </div>
     )
