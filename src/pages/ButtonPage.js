@@ -7,7 +7,7 @@ function ButtonPage() {
     return (
         <div>
             <div>
-                <Button className="mb-5" success primary onClick={handleClick}>
+                <Button className="mb-5" success onClick={handleClick}>
                     <GoBell/>
                     Click me!
                 </Button>
